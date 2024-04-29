@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <%=car.name%>
+    </h1>
+   <% if(car.isElectric){ %>
+        <p>This car is electric!</p>
+   <%} else {%>
+        <p>This Car is not electric!</p>
+    <% }%>
+    <form action="/cars/<%=car._id%>?_method=DELETE" method="POST">
+        <button>Delete <%= car.name %></button>
+    </form>
+    <a href="/cars">Back to Cars</a>
+    <a href="/cars/<%=car._id%>/edit">Update <%car.name%></a>
+</body>
+</html>

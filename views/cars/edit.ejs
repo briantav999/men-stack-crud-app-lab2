@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit <%=car.name%></h1>
+    <form action="/cars/<%=car._id%>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%=car.name%>" />
+
+        <label for="Model">Model:</label>
+        <input type="text" name="model" id="model" />
+    
+        <label for="isElectric">Is Electric?</label>
+        <input type="checkbox" name="isElectric" id="isElectric"
+            <% if(car.isElectric){%>
+                checked
+            <%}%>
+        />
+        <button type="submit">Add Car</button>
+      </form>
+      <a href="/cars/">Back to Cars</a>
+</body>
+</html>

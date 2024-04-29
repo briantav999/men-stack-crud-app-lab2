@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+</head>
+<body>
+    <h1>Create a car</h1>
+    <form action="/cars" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="Model">Model:</label>
+        <input type="text" name="model" id="model" />
+    
+        <label for="isElectric">Is Electric?</label>
+        <input type="checkbox" name="isElectric" id="isElectric" />
+    
+        <button type="submit">Add Car</button>
+      </form>
+      <a href="/cars/">Back to Cars</a>
+</body>
+</html>
